@@ -29,7 +29,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="Background" alignment="0" max="32767" attributes="0"/>
+          <Component id="Background" alignment="0" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -52,103 +52,94 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="Iniicio_Sesion" min="-2" max="-2" attributes="0"/>
-                      <Component id="User_txt" min="-2" pref="460" max="-2" attributes="0"/>
-                      <Component id="Separator_Password" min="-2" pref="460" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="Semi_Background" min="-2" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="202" pref="202" max="-2" attributes="0"/>
-                          <Component id="Empresa" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="695" pref="695" max="-2" attributes="0"/>
-                  <Component id="Logo" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
-                  <Component id="Pass_Field" min="-2" max="-2" attributes="0"/>
-              </Group>
+              <Component id="bar" min="-2" max="-2" attributes="0"/>
               <Group type="102" attributes="0">
                   <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
                   <Component id="Logo_Name" min="-2" pref="120" max="-2" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
                   <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
-                  <Component id="User_Field" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
-                  <Component id="Separator_User" min="-2" pref="460" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="Iniicio_Sesion" min="-2" max="-2" attributes="0"/>
+                      <Component id="User_Field" min="-2" max="-2" attributes="0"/>
+                      <Component id="Separator_User" min="-2" pref="460" max="-2" attributes="0"/>
+                      <Component id="Pass_Field" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="185" pref="185" max="-2" attributes="0"/>
+                  <Component id="Logo" min="-2" max="-2" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
                   <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
                   <Component id="Password_txt" min="-2" pref="460" max="-2" attributes="0"/>
+                  <EmptySpace min="272" pref="272" max="-2" attributes="0"/>
+                  <Component id="Empresa" min="-2" max="-2" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
                   <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
                   <Component id="loginbtn" min="-2" max="-2" attributes="0"/>
               </Group>
-              <Component id="bar" min="-2" max="-2" attributes="0"/>
+              <Group type="102" attributes="0">
+                  <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
+                  <Component id="Separator_Password" min="-2" pref="460" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" attributes="0">
+                  <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
+                  <Component id="User_txt" min="-2" pref="460" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" attributes="0">
+                  <EmptySpace min="580" pref="580" max="-2" attributes="0"/>
+                  <Component id="Semi_Background" min="-2" max="-2" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="210" pref="210" max="-2" attributes="0"/>
-                  <Component id="Iniicio_Sesion" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="93" pref="93" max="-2" attributes="0"/>
-                  <Component id="User_txt" min="-2" pref="29" max="-2" attributes="0"/>
-                  <EmptySpace min="111" pref="111" max="-2" attributes="0"/>
-                  <Component id="Separator_Password" min="-2" pref="20" max="-2" attributes="0"/>
-              </Group>
-              <Component id="Semi_Background" min="-2" max="-2" attributes="0"/>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="480" pref="480" max="-2" attributes="0"/>
-                  <Component id="Empresa" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="200" pref="200" max="-2" attributes="0"/>
-                  <Component id="Logo" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="430" pref="430" max="-2" attributes="0"/>
-                  <Component id="Pass_Field" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="60" pref="60" max="-2" attributes="0"/>
+                  <Component id="bar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                   <Component id="Logo_Name" min="-2" pref="50" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="320" pref="320" max="-2" attributes="0"/>
-                  <Component id="User_Field" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="390" pref="390" max="-2" attributes="0"/>
-                  <Component id="Separator_User" min="-2" pref="20" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="470" pref="470" max="-2" attributes="0"/>
-                  <Component id="Password_txt" min="-2" pref="29" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="610" pref="610" max="-2" attributes="0"/>
+                  <EmptySpace min="90" pref="90" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                          <Component id="Iniicio_Sesion" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="53" pref="53" max="-2" attributes="0"/>
+                          <Component id="User_Field" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="41" pref="41" max="-2" attributes="0"/>
+                          <Component id="Separator_User" min="-2" pref="20" max="-2" attributes="0"/>
+                          <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                          <Component id="Pass_Field" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="Logo" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="Password_txt" min="-2" pref="29" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                          <Component id="Empresa" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace min="101" pref="101" max="-2" attributes="0"/>
                   <Component id="loginbtn" min="-2" max="-2" attributes="0"/>
               </Group>
-              <Component id="bar" min="-2" max="-2" attributes="0"/>
+              <Group type="102" attributes="0">
+                  <EmptySpace min="500" pref="500" max="-2" attributes="0"/>
+                  <Component id="Separator_Password" min="-2" pref="20" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" attributes="0">
+                  <EmptySpace min="360" pref="360" max="-2" attributes="0"/>
+                  <Component id="User_txt" min="-2" pref="29" max="-2" attributes="0"/>
+              </Group>
+              <Component id="Semi_Background" min="-2" max="-2" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JLabel" name="Logo">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
@@ -167,20 +158,6 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="Logo_Name">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Roboto Black" size="24" style="0"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Images/mini_logo.png"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="LOGO"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JLabel" name="Empresa">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -196,6 +173,20 @@
             <Property name="text" type="java.lang.String" value="Empresa"/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JLabel" name="Logo_Name">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Roboto Black" size="24" style="0"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Images/mini_logo.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="LOGO"/>
+          </Properties>
+        </Component>
         <Component class="javax.swing.JLabel" name="Semi_Background">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -208,6 +199,7 @@
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
+            <Property name="opaque" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="mouseDragged" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="barMouseDragged"/>

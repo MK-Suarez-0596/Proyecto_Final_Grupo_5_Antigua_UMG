@@ -4,6 +4,12 @@
  */
 package Login;
 
+import Modulos.*;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.PreparedStatement;
+import Conexion.Conexion;
+import javax.swing.JOptionPane;
 import java.awt.Color;
 
 /**
@@ -23,8 +29,8 @@ public class Login extends javax.swing.JFrame {
 
         Background = new javax.swing.JPanel();
         Logo = new javax.swing.JLabel();
-        Logo_Name = new javax.swing.JLabel();
         Empresa = new javax.swing.JLabel();
+        Logo_Name = new javax.swing.JLabel();
         Semi_Background = new javax.swing.JLabel();
         bar = new javax.swing.JPanel();
         exit_cube = new javax.swing.JPanel();
@@ -48,6 +54,7 @@ public class Login extends javax.swing.JFrame {
         Background.setBackground(new java.awt.Color(255, 255, 255));
         Background.setPreferredSize(new java.awt.Dimension(1080, 720));
 
+        Logo.setBackground(new java.awt.Color(255, 255, 255));
         Logo.setForeground(new java.awt.Color(255, 255, 255));
         Logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logo_2.png"))); // NOI18N
@@ -55,20 +62,21 @@ public class Login extends javax.swing.JFrame {
         Logo.setMinimumSize(new java.awt.Dimension(270, 270));
         Logo.setPreferredSize(new java.awt.Dimension(270, 270));
 
-        Logo_Name.setFont(new java.awt.Font("Roboto Black", 0, 24)); // NOI18N
-        Logo_Name.setForeground(new java.awt.Color(0, 0, 0));
-        Logo_Name.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/mini_logo.png"))); // NOI18N
-        Logo_Name.setText("LOGO");
-
         Empresa.setBackground(new java.awt.Color(255, 255, 255));
         Empresa.setFont(new java.awt.Font("Roboto Black", 0, 24)); // NOI18N
         Empresa.setForeground(new java.awt.Color(255, 255, 255));
         Empresa.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Empresa.setText("Empresa");
 
+        Logo_Name.setFont(new java.awt.Font("Roboto Black", 0, 24)); // NOI18N
+        Logo_Name.setForeground(new java.awt.Color(0, 0, 0));
+        Logo_Name.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/mini_logo.png"))); // NOI18N
+        Logo_Name.setText("LOGO");
+
         Semi_Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icon.jpg"))); // NOI18N
 
         bar.setBackground(new java.awt.Color(255, 255, 255));
+        bar.setOpaque(false);
         bar.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 barMouseDragged(evt);
@@ -207,83 +215,76 @@ public class Login extends javax.swing.JFrame {
         Background.setLayout(BackgroundLayout);
         BackgroundLayout.setHorizontalGroup(
             BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BackgroundLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Iniicio_Sesion)
-                    .addComponent(User_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Separator_Password, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(70, 70, 70)
-                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Semi_Background)
-                    .addGroup(BackgroundLayout.createSequentialGroup()
-                        .addGap(202, 202, 202)
-                        .addComponent(Empresa))))
-            .addGroup(BackgroundLayout.createSequentialGroup()
-                .addGap(695, 695, 695)
-                .addComponent(Logo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(BackgroundLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(Pass_Field))
+            .addComponent(bar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(BackgroundLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addComponent(Logo_Name, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(BackgroundLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addComponent(User_Field))
+                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Iniicio_Sesion)
+                    .addComponent(User_Field)
+                    .addComponent(Separator_User, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Pass_Field))
+                .addGap(185, 185, 185)
+                .addComponent(Logo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(BackgroundLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addComponent(Separator_User, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(BackgroundLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(Password_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(Password_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(272, 272, 272)
+                .addComponent(Empresa))
             .addGroup(BackgroundLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addComponent(loginbtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(bar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(BackgroundLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(Separator_Password, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(BackgroundLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(User_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(BackgroundLayout.createSequentialGroup()
+                .addGap(580, 580, 580)
+                .addComponent(Semi_Background))
         );
         BackgroundLayout.setVerticalGroup(
             BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BackgroundLayout.createSequentialGroup()
-                .addGap(210, 210, 210)
-                .addComponent(Iniicio_Sesion)
-                .addGap(93, 93, 93)
-                .addComponent(User_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(111, 111, 111)
-                .addComponent(Separator_Password, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(Semi_Background)
-            .addGroup(BackgroundLayout.createSequentialGroup()
-                .addGap(480, 480, 480)
-                .addComponent(Empresa))
-            .addGroup(BackgroundLayout.createSequentialGroup()
-                .addGap(200, 200, 200)
-                .addComponent(Logo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(BackgroundLayout.createSequentialGroup()
-                .addGap(430, 430, 430)
-                .addComponent(Pass_Field))
-            .addGroup(BackgroundLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(Logo_Name, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(BackgroundLayout.createSequentialGroup()
-                .addGap(320, 320, 320)
-                .addComponent(User_Field))
-            .addGroup(BackgroundLayout.createSequentialGroup()
-                .addGap(390, 390, 390)
-                .addComponent(Separator_User, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(BackgroundLayout.createSequentialGroup()
-                .addGap(470, 470, 470)
-                .addComponent(Password_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(BackgroundLayout.createSequentialGroup()
-                .addGap(610, 610, 610)
+                .addComponent(bar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(Logo_Name, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(90, 90, 90)
+                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(BackgroundLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(Iniicio_Sesion)
+                        .addGap(53, 53, 53)
+                        .addComponent(User_Field)
+                        .addGap(41, 41, 41)
+                        .addComponent(Separator_User, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20)
+                        .addComponent(Pass_Field))
+                    .addComponent(Logo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Password_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(BackgroundLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(Empresa)))
+                .addGap(101, 101, 101)
                 .addComponent(loginbtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(bar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(BackgroundLayout.createSequentialGroup()
+                .addGap(500, 500, 500)
+                .addComponent(Separator_Password, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(BackgroundLayout.createSequentialGroup()
+                .addGap(360, 360, 360)
+                .addComponent(User_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(Semi_Background)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -329,7 +330,40 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_loginbtnMouseExited
 
     private void loginbtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginbtnMouseClicked
-    javax.swing.JOptionPane.showMessageDialog(this,"intento de inicio de sesion con datos:\nUsuario: "+User_txt.getText()+"\nContraseña: "+String.valueOf(Password_txt.getPassword()),"LOGIN",javax.swing.JOptionPane.INFORMATION_MESSAGE);
+    String usuario = User_txt.getText();
+    String contrasena = new String(Password_txt.getPassword());
+
+    try {
+        // Cargar datos del archivo de configuracion y conectar
+        Conexion conexion = new Conexion();
+        Connection conn = conexion.getConnection();
+
+        // Consulta SQL simple
+        String sql = "SELECT * FROM usuario WHERE usuario = ? AND password = ?";
+        PreparedStatement stmt = conn.prepareStatement(sql);
+        stmt.setString(1, usuario);
+        stmt.setString(2, contrasena);
+
+        ResultSet rs = stmt.executeQuery();
+
+        if (rs.next()) {
+            // Credenciales válidas, abrir el dashboard
+            Modulos.Dashboard dashboard = new Modulos.Dashboard();
+            dashboard.setVisible(true);
+            this.dispose(); // Cierra la ventana de login
+        } else {
+            JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrectos");
+        }
+
+        // Cerrar conexión
+        rs.close();
+        stmt.close();
+        conn.close();
+
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "Error al conectar con la base de datos:\n" + e.getMessage());
+    }
+
     }//GEN-LAST:event_loginbtnMouseClicked
 
     private void User_txtMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_User_txtMousePressed
@@ -379,6 +413,7 @@ public class Login extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
