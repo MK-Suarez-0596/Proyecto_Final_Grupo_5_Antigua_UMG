@@ -12,7 +12,7 @@ public class Conexion {
     private static Properties config = new Properties();
     
     static {
-        try(InputStream in = Conexion.class.getResourceAsStream("dbconfigProyecto_Final_v2.properties")){
+        try(InputStream in = Conexion.class.getResourceAsStream("dbconfig_proy_final.properties")){
             if(in == null){
                 throw new IOException("Archivo Properties no encontrado");
             }
