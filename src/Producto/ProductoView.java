@@ -143,6 +143,7 @@ public class ProductoView extends javax.swing.JInternalFrame {
         txtId.setBackground(new java.awt.Color(255, 255, 255));
         txtId.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
         txtId.setForeground(new java.awt.Color(204, 204, 204));
+        txtId.setBorder(null);
         txtId.setMaximumSize(new java.awt.Dimension(250, 26));
         txtId.setMinimumSize(new java.awt.Dimension(250, 26));
         txtId.setName(""); // NOI18N
@@ -151,6 +152,7 @@ public class ProductoView extends javax.swing.JInternalFrame {
         txtProducto.setBackground(new java.awt.Color(255, 255, 255));
         txtProducto.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
         txtProducto.setForeground(new java.awt.Color(204, 204, 204));
+        txtProducto.setBorder(null);
         txtProducto.setMaximumSize(new java.awt.Dimension(250, 26));
         txtProducto.setMinimumSize(new java.awt.Dimension(250, 26));
         txtProducto.setName(""); // NOI18N
@@ -159,6 +161,7 @@ public class ProductoView extends javax.swing.JInternalFrame {
         txtPrecio.setBackground(new java.awt.Color(255, 255, 255));
         txtPrecio.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
         txtPrecio.setForeground(new java.awt.Color(204, 204, 204));
+        txtPrecio.setBorder(null);
         txtPrecio.setMaximumSize(new java.awt.Dimension(250, 26));
         txtPrecio.setMinimumSize(new java.awt.Dimension(250, 26));
         txtPrecio.setName(""); // NOI18N
@@ -167,6 +170,7 @@ public class ProductoView extends javax.swing.JInternalFrame {
         txtStock.setBackground(new java.awt.Color(255, 255, 255));
         txtStock.setFont(new java.awt.Font("Roboto Medium", 0, 12)); // NOI18N
         txtStock.setForeground(new java.awt.Color(204, 204, 204));
+        txtStock.setBorder(null);
         txtStock.setMaximumSize(new java.awt.Dimension(250, 26));
         txtStock.setMinimumSize(new java.awt.Dimension(250, 26));
         txtStock.setName(""); // NOI18N
