@@ -66,7 +66,6 @@
                       <Component id="Gest_Prov" min="-2" max="-2" attributes="0"/>
                       <Component id="Gest_Client" min="-2" max="-2" attributes="0"/>
                       <Component id="Fact" min="-2" max="-2" attributes="0"/>
-                      <Component id="Report" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -106,8 +105,7 @@
                   <Component id="Gest_Client" min="-2" pref="20" max="-2" attributes="0"/>
                   <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
                   <Component id="Fact" min="-2" pref="20" max="-2" attributes="0"/>
-                  <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                  <Component id="Report" min="-2" pref="20" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -224,17 +222,6 @@
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x2022; Facturaci&#xf3;n."/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="Report">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Roboto" size="18" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="&#x2022; Reportes."/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="Icon">

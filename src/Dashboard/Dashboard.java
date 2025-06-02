@@ -9,7 +9,6 @@ import Proveedor.*;
 import Empleado.*;
 import Producto.*;
 import Usuario.*;
-import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMTMaterialLighterIJTheme;
 import java.awt.Color;
 import java.time.LocalDate;
 import java.time.format.TextStyle;
@@ -50,6 +49,7 @@ paneles = new JPanel[] { btn_princp, btn_emp, btn_prod, btn_prov, btn_client, bt
 
         for (JPanel panel : paneles) {
             panel.addMouseListener(new java.awt.event.MouseAdapter() {
+                
             @Override
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 if (panel.getBackground() != colorSeleccionado) {
@@ -689,7 +689,6 @@ Init.setVisible(true);
 
         
 
-        FlatMTMaterialLighterIJTheme.setup();
         
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {

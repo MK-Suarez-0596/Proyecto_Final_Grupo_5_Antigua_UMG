@@ -4,11 +4,7 @@
  */
 package Login;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.PreparedStatement;
-import Conexion.Conexion;
-import javax.swing.JOptionPane;
+
 import Login.*;
 import java.awt.Color;
 

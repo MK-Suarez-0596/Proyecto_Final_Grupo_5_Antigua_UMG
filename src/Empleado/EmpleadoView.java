@@ -34,7 +34,6 @@ public class EmpleadoView extends javax.swing.JInternalFrame {
         ((javax.swing.plaf.basic.BasicInternalFrameUI) this.getUI()).setNorthPane(null);
         comboCargo.setEditable(true);
         tblEmpleado.setModel(modelo);
-        tblEmpleado.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         jScrollPane1.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 
         

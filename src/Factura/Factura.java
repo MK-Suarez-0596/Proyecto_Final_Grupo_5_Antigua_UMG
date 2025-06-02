@@ -9,6 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.io.*;
 import Conexion.Conexion;
+import java.util.Random;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
@@ -29,14 +30,24 @@ public class Factura extends JInternalFrame {
     private JButton btnCalcularTotal, btnGuardarRecibo, btnResetear;
     private JComboBox<ClienteItem> cmbClientes;
 
-    private int compraId = 51153;
+    private int compraId;
     private int clienteSeleccionado = -1;
 
+    public void generarNuevoCompraId() {
+        Random rand = new Random();
+        this.compraId = rand.nextInt(90000) + 10000;
+    }
+
+    public int getCompraId() {
+        return compraId;
+    }
+    
     public Factura() {
         super("Factura", true, false, false, false);
         setSize(1030, 750);
         quitarBarraTitulo();
         initComponents();
+        generarNuevoCompraId();
     }
 
     private void quitarBarraTitulo() {
@@ -47,6 +58,7 @@ public class Factura extends JInternalFrame {
 
     private void initComponents() {
         setLayout(new BorderLayout());
+        generarNuevoCompraId();
 
         JPanel panelIzq = new JPanel(new BorderLayout());
 
@@ -132,6 +144,7 @@ public class Factura extends JInternalFrame {
         });
         btnResetear.addActionListener(e -> {
             resetear();
+            generarNuevoCompraId();
             panelTotales.removeAll();
             panelTotales.add(new JLabel("-------------------------------------------------------------", SwingConstants.CENTER));
             panelTotales.add(new JLabel("Subtotal (sin IVA): Q0.00"));
@@ -257,9 +270,13 @@ public class Factura extends JInternalFrame {
             SimpleDateFormat sdfHora = new SimpleDateFormat("hh:mm:ss a");
             SimpleDateFormat sdfFecha = new SimpleDateFormat("EEEE, dd/MM/yyyy");
             Date ahora = new Date();
-            contenido.showText("Hora: " + sdfHora.format(ahora) + "    Fecha: " + sdfFecha.format(ahora));
+            
+            contenido.showText("Hora: " + sdfHora.format(ahora));
             contenido.newLineAtOffset(0, -leading);
-
+            
+            contenido.showText("Fecha: " + sdfFecha.format(ahora));
+            contenido.newLineAtOffset(0, -leading);
+            
             contenido.showText("Compra ID: " + compraId);
             contenido.newLineAtOffset(0, -leading);
 

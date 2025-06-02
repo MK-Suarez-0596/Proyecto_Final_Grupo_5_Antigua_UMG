@@ -32,7 +32,6 @@ public class ProductoView extends javax.swing.JInternalFrame {
         ((javax.swing.plaf.basic.BasicInternalFrameUI) this.getUI()).setNorthPane(null);
         comboCategoria.setEditable(true);
         tblProducto.setModel(modelo);
-        tblProducto.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         jScrollPane1.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         
             cargarCategorias();

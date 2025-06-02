@@ -34,7 +34,6 @@ public class ProveedorView extends javax.swing.JInternalFrame {
         this.setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI) this.getUI()).setNorthPane(null);
         tblProveedor.setModel(modelo);
-        tblProveedor.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         jScrollPane1.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 
         cargarProveedor();

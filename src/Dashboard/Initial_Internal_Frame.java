@@ -39,7 +39,6 @@ public class Initial_Internal_Frame extends javax.swing.JInternalFrame {
         Gest_Prov = new javax.swing.JLabel();
         Gest_Client = new javax.swing.JLabel();
         Fact = new javax.swing.JLabel();
-        Report = new javax.swing.JLabel();
         Icon = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1030, 740));
@@ -88,10 +87,6 @@ public class Initial_Internal_Frame extends javax.swing.JInternalFrame {
         Fact.setForeground(new java.awt.Color(0, 0, 0));
         Fact.setText("• Facturación.");
 
-        Report.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        Report.setForeground(new java.awt.Color(0, 0, 0));
-        Report.setText("• Reportes.");
-
         Icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Rest.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -114,8 +109,7 @@ public class Initial_Internal_Frame extends javax.swing.JInternalFrame {
                         .addComponent(Icon))
                     .addComponent(Gest_Prov)
                     .addComponent(Gest_Client)
-                    .addComponent(Fact)
-                    .addComponent(Report)))
+                    .addComponent(Fact)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,8 +141,7 @@ public class Initial_Internal_Frame extends javax.swing.JInternalFrame {
                 .addComponent(Gest_Client, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
                 .addComponent(Fact, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(Report, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(134, 134, 134))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -177,7 +170,6 @@ public class Initial_Internal_Frame extends javax.swing.JInternalFrame {
     private javax.swing.JLabel Gest_Prod;
     private javax.swing.JLabel Gest_Prov;
     private javax.swing.JLabel Icon;
-    private javax.swing.JLabel Report;
     private javax.swing.JLabel Welcome;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

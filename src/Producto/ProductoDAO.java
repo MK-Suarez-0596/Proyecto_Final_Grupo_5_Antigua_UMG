@@ -110,7 +110,7 @@ public static String validarCamposObligatorios(ProductoModel p) {
     if (p.getCategoria().isBlank()) return "La Categoria no puede estar vacía.";
     
     if (productoExiste(p.getProducto())) return "El Producto ya está registrado.";
-    return ""; // todo OK
+    return "";
 }
 
 public static boolean productoExiste(String producto) {

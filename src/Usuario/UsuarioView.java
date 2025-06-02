@@ -32,7 +32,6 @@ public class UsuarioView extends javax.swing.JInternalFrame {
         ((javax.swing.plaf.basic.BasicInternalFrameUI) this.getUI()).setNorthPane(null);
         ComboRol.setEditable(true);
         tblUsuario.setModel(modelo);
-        tblUsuario.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         jScrollPane1.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 
         
@@ -714,8 +713,7 @@ public class UsuarioView extends javax.swing.JInternalFrame {
             e.getDireccion(), 
             e.getEmail()
         });
-
-        // Ocultar columna "email" (columna 9)
+        
         tblUsuario.getColumnModel().getColumn(2).setMinWidth(0);
         tblUsuario.getColumnModel().getColumn(2).setMaxWidth(0);
         tblUsuario.getColumnModel().getColumn(2).setWidth(0);
@@ -763,7 +761,6 @@ public class UsuarioView extends javax.swing.JInternalFrame {
         modelo.addRow(fila);
     }
 
-    // Ocultar la columna de contraseña (índice 2 en este arreglo)
     tblUsuario.getColumnModel().getColumn(2).setMinWidth(0);
     tblUsuario.getColumnModel().getColumn(2).setMaxWidth(0);
     tblUsuario.getColumnModel().getColumn(2).setWidth(0);
@@ -799,7 +796,6 @@ private void cargarUsuarios() {
         });
     }
 
-    // Ocultar la columna de contraseña (index 1)
     tblUsuario.getColumnModel().getColumn(2).setMinWidth(0);
     tblUsuario.getColumnModel().getColumn(2).setMaxWidth(0);
     tblUsuario.getColumnModel().getColumn(2).setWidth(0);
